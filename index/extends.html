@@ -1,0 +1,228 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback</title>
+</head>
+
+<body id="top">
+    <!-- Header -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+        <p>Share your feedback about this course.</p>
+    </header>
+
+    <!-- Navi -->
+    <nav>
+        <a href="#feedback">Course Feedback</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <main>
+
+        <!-- Section 1: Course feedback table -->
+        <section id="feedback">
+            <h2>Weekly Course Feedback</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Week 1</td>
+                        <td>Introduction to HTML</td>
+                        <td>Good</td>
+                    </tr>
+
+                    <tr>
+                        <td>Week 2</td>
+                        <td>Tables and Forms</td>
+                        <td>Good</td>
+                    </tr>
+
+                    <tr>
+                        <td>Week 3</td>
+                        <td>Semantic HTML</td>
+                        <td>Good</td>
+                    </tr>
+
+                    <tr>
+                        <td>Week 4</td>
+                        <td rowspan="2">Mini Project</td>
+                        <td>Good</td>
+                    </tr>
+
+                    <tr>
+                        <td>Week 5</td>
+                        <td>Good</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">Average Rating</td>
+                        <td>Good</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 2: Feedback form -->
+        <section id="form">
+            <h2>Course Feedback Form</h2>
+
+            <form action="#" method="post">
+
+                <!-- Student name -->
+                <p>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text"
+                           id="fullname"
+                           name="fullname"
+                           required>
+                </p>
+
+                <!-- Student email -->
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required>
+                </p>
+
+                <!-- Course rating radio buttons -->
+                <fieldset>
+                    <legend>How would you rate this course?</legend>
+
+                    <label>
+                        <input type="radio"
+                               id="good"
+                               name="rating"
+                               value="Good"
+                               required>
+                        Good
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               id="average"
+                               name="rating"
+                               value="Average">
+                        Average
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               id="poor"
+                               name="rating"
+                               value="Poor">
+                        Poor
+                    </label>
+                </fieldset>
+
+                <br>
+
+                <!-- Topics to practise checkboxes -->
+                <fieldset>
+                    <legend>Which topics would you like to practise more?</legend>
+
+                    <label>
+                        <input type="checkbox"
+                               id="html"
+                               name="topics"
+                               value="HTML">
+                        HTML
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               id="tables"
+                               name="topics"
+                               value="Tables">
+                        Tables
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               id="lab"
+                               name="topics"
+                               value="Forms">
+                        Forms
+                    </label>
+                </fieldset>
+
+                <br>
+
+                <!-- Section or group selection -->
+                <p>
+                    <label for="group">Section/Group:</label>
+                    <select id="group" name="group" required>
+                        <option value="">-- Select Group --</option>
+                        <option value="A">K1</option>
+                        <option value="B">K2</option>
+                        <option value="C">K3</option>
+                    </select>
+                </p>
+
+                <!-- Additional comments -->
+                <p>
+                    <label for="feedback-comments">
+                        Additional Feedback:
+                    </label>
+                    <br>
+                    <textarea id="feedback-comments"
+                              name="feedback-comments"
+                              rows="4"
+                              cols="40"
+                              placeholder="Write your feedback here..."></textarea>
+                </p>
+
+                <!-- Form buttons -->
+                <button type="submit">Submit Feedback</button>
+                <button type="reset">Clear Form</button>
+
+            </form>
+
+            <p><a href="#top">Return to Top</a></p>
+        </section>
+
+        <!-- Section 3: Student comments -->
+        <section id="comments">
+            <h2>Student Comments</h2>
+
+            <article>
+                <h3>Umi Nurin Insyirah (S80222)</h3>
+                <p>
+                    The course helps me understand the basic structure
+                    of HTML and how to create a webpage.
+                </p>
+            </article>
+
+            <article>
+                <h3>Muhammad Azmeer Irham (S80012)</h3>
+                <p>
+                    I enjoy learning about tables and forms.
+                    More practical exercises would help me improve my skills.
+                </p>
+            </article>
+
+            <p><a href="#top">Return to Top</a></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Course Feedback Page</p>
+    </footer>
+
+</body>
+</html>

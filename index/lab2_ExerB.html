@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback</title>
+</head>
+
+<body>
+
+    <!--
+    Problem B: Errors found
+
+    1. Line 10: Incorrect closing tag </head> instead of </header>.
+    2. Line 20: Used <td> instead of <th> for the Rating heading.
+    3. Line 26: Missing closing </tr> tag in the Week 1 row.
+    4. Line 28: Incorrect colspan="3" for Tables and Forms.
+    5. Line 32: Missing closing </td> after Semantic HTML.
+    6. Line 40: Label for="name" did not match input id="fullname".
+    7. Lines 42 and 44: Radio buttons used different name attributes.
+    8. Line 47: Label for="labs" did not match checkbox id="lab".
+    9. Line 49: Incorrect closing tag </from> instead of </form>.
+    10. Line 52: Missing semicolon in the &copy; entity.
+    -->
+
+    <!-- Header -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <main>
+
+        <!-- Course feedback summary table -->
+        <section id="results">
+            <h2>Feedback Summary</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Introduction to HTML</td>
+                        <td>4.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Tables and Forms</td>
+                        <td>4.0</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Semantic HTML</td>
+                        <td>4.0</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td rowspan="2">Mini Project</td>
+                        <td>4.5</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>5.0</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">Average Rating</td>
+                        <td>4.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Feedback form -->
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+
+            <form action="submit_feedback.php" method="post">
+
+                <!-- Name -->
+                <p>
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname"
+                           name="fullname" required>
+                </p>
+
+                <!-- Email -->
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email"
+                           name="email" required>
+                </p>
+
+                <!-- Overall rating -->
+                <fieldset>
+                    <legend>Overall Rating:</legend>
+
+                    <input type="radio" id="good"
+                           name="rating" value="good" required>
+                    <label for="good">Good</label>
+
+                    <input type="radio" id="average"
+                           name="rating" value="average">
+                    <label for="average">Average</label>
+
+                    <input type="radio" id="poor"
+                           name="rating" value="poor">
+                    <label for="poor">Poor</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Topics to practise -->
+                <fieldset>
+                    <legend>Topics to Practise More:</legend>
+
+                    <input type="checkbox" id="html"
+                           name="topics" value="html">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="tables"
+                           name="topics" value="tables">
+                    <label for="tables">Tables</label>
+
+                    <input type="checkbox" id="forms"
+                           name="topics" value="forms">
+                    <label for="forms">Forms</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Section or group selection -->
+                <p>
+                    <label for="group">Section/Group:</label>
+                    <select id="group" name="group" required>
+                        <option value="">-- Select Group --</option>
+                        <option value="A">Group A</option>
+                        <option value="B">Group B</option>
+                        <option value="C">Group C</option>
+                    </select>
+                </p>
+
+                <!-- Additional feedback -->
+                <p>
+                    <label for="feedback">Additional Comments:</label>
+                    <br>
+                    <textarea id="feedback" name="feedback"
+                              rows="4" cols="40"></textarea>
+                </p>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+
+            </form>
+        </section>
+
+        <!-- Student comments -->
+        <section id="comments">
+            <h2>Student Comments</h2>
+
+            <article>
+                <h3>Student 1</h3>
+                <p>
+                    This course helped me understand HTML structure
+                    and how to create a basic webpage.
+                </p>
+            </article>
+
+            <article>
+                <h3>Student 2</h3>
+                <p>
+                    I enjoyed learning about tables and forms.
+                    More practical exercises would be helpful.
+                </p>
+            </article>
+
+            <p><a href="#top">Return to Top</a></p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>
